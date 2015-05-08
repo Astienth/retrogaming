@@ -22,6 +22,6 @@ class annoncesController {
        else {
         $message = 'Incomplet';
        }
-        include('/app/view/homePOST.php');
+        include('/app/view/home.php');
     }
 }
