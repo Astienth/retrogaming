@@ -1,0 +1,19 @@
+<?php
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+var_dump($id);
+
+echo $id['id'];
+
+echo $id['annonce'];
+?>
+
+<form method="POST" action="/CoinRetrogaming/listPost"/>
+<input type="text" name="test"/>
+<input type="submit" name="submit"/>
+</form>
