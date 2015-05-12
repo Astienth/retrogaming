@@ -6,6 +6,7 @@ $router->setBasePath('/CoinRetrogaming'); //a modifier en prod
 //liste des routes :
 
 $router->map( 'GET', '/', 'annoncesController#indexAction');
+$router->map( 'GET', '/index.php', 'annoncesController#indexAction');
 $router->map( 'GET', '/list/[i:id]/[i:annonce]', 'annoncesController#listAction');
 $router->map( 'POST', '/listPost', 'annoncesController#listPostAction');
   

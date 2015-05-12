@@ -4,7 +4,7 @@ class annoncesController {
     
     public function indexAction() {
     
-        include('/app/view/index.php');
+        include('/app/view/home.php');
         
     }
     

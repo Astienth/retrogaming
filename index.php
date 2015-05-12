@@ -1,4 +1,5 @@
 <?php
+session_start();
 define("CSS", "www/css");
 define("JS", "www/js");
 define("IMG", "www/img");

@@ -12,7 +12,7 @@ class Loader {
     public static function modelLoader($class)
     {
         $path = 'app/model/';
-        include $path.$class.'.php';
+        include $path.$class.'.class.php';
     }
 }
 
