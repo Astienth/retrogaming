@@ -2,6 +2,9 @@
 include 'header.php';
 ?>
 <?php
+
+$db = DbConnection::getInstance();
+
 $annonces = new AnnonceManager($db);
 $list = $annonces->getList();
 var_dump($list);

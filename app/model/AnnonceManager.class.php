@@ -4,12 +4,13 @@
  *
  * @author Astien
  */
+
 class AnnonceManager {
     
     private $db;
     
-    public function __construct(PDO $db) {
-        $this->db = $db;
+    public function __construct() {
+        $this->db = DbConnection::getInstance()->getDb();
     }
     
     public function getList($debut = -1, $limite = -1)
