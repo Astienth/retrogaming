@@ -7,9 +7,9 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Great Page title</title>
+	<title>RetroGaming</title>
 	<meta name="description" content="">
-	<meta name="AStien" content=" Retrogaming">
+	<meta name="Astien" content=" Retrogaming">
         <meta http-equiv="X-UA-Compatible" content="IE=9" />
 	<!-- Mobile Specific Metas
   ================================================== -->
@@ -23,10 +23,10 @@
 
 	<!-- CSS
   ================================================== -->
-  	<link rel="stylesheet" href="c<?php echo CSS ?>/reset.css">
-	<link rel="stylesheet" href="<?php echo CSS ?>/base.css">
-	<link rel="stylesheet" href="<?php echo CSS ?>/skeleton.css">
-	<link rel="stylesheet" href="<?php echo CSS ?>/layout.css">
+  	<link rel="stylesheet" href="c<?php echo CSS ?>/reset.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo CSS ?>/base.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo CSS ?>/skeleton.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo CSS ?>/layout.css" type="text/css">
         <link href="<?php echo CSS ?>/style.css" rel="stylesheet" type="text/css" />
 
 	<!--[if lt IE 9]>
@@ -73,3 +73,4 @@
 			</div>
 		</nav>
 	</header>
+        	<div class='container'>

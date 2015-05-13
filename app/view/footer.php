@@ -1,4 +1,8 @@
-<footer>
+	</div>
+
+
+	<div class='clear'></div>
+        <footer>
         <div class='container'>
 
                 <div class='eight columns'>

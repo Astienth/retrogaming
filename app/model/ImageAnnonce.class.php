@@ -4,7 +4,7 @@
  *
  * @author Astien
  */
-class Image {
+class ImageAnnonce {
     
     private $_id; //id image en bdd
     private $_idAnnonce; //Id de l'annonce à laquelle correspond l'image
@@ -35,24 +35,34 @@ class Image {
         return $this->_id;
     }
     
-    public function setId($id) {
-        $this->_id = $id;
-    }
-    
     public function getIdAnnonce(){
         return $this->_idAnnonce;
-    }
-    
-    public function setIdAnnonce($idAnnonce) {
-        $this->_Id = $idAnnonce;
     }
     
     public function getPath(){
         return $this->_path;
     }
     
+    public function setId($id) {
+        $id = (int) $id;
+        if ($id > 0)
+        {
+          $this->_id = $id;
+        }
+    }    
+    
+    public function setIdAnnonce($idAnnonce) {
+        $idAnnonce = (int) $idAnnonce;
+        if ($idAnnonce > 0) {
+            $this->_idAnnonce = $idAnnonce;
+        }
+    }
+
     public function setPath($path) {
-        $this->_Id = $path;
+        if (is_string($path))
+        {
+          $this->_path = $path;
+        }
     }
 
 }
