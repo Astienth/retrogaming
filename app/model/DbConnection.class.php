@@ -5,8 +5,6 @@
  * @author Astien
  */
 
-
-
 class DbConnection {
 
     // instance de la classe
