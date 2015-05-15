@@ -8,10 +8,22 @@ class annoncesController {
         
     }
     
-    public function listAction($id) {
+    public function listAction(){
+        $annonces = new AnnonceManager();
+        $list = $annonces->getList();
+        include('app/view/list.php');
+    }
     
-       include('/app/view/home.php');
-        
+    public function annonceAction($id) {
+    
+        $annonces = new AnnonceManager();
+        $id = $id['id'];
+        $annonce = $annonces->getById($id);
+        if($annonce->getId() == null){
+            include('/app/view/404.php');
+         } else {
+           include('/app/view/annonces.php');
+        }
     }
     
     public function listPostAction() {

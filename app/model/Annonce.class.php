@@ -18,6 +18,7 @@ class Annonce {
     private $_telContact;
     private $_mailContact;
     private $_idUser;
+    private $_img;
     
     public function __construct($donnees) {
         $this->hydrate($donnees);
@@ -83,6 +84,10 @@ class Annonce {
         return $this->_mailContact;
     }
     
+    public function getImg(){
+        return $this->_img;
+    }
+    
     public function setId($id) {
         $id = (int) $id;
         if ($id > 0) {
@@ -122,12 +127,34 @@ class Annonce {
         }
     }
     
-    public function setDateCreation(DateTime $date) {
+    public function setDateCreation($date=NULL) {
+        if(is_string($date)){ 
+            $date = new DateTime($date);
+            if($date){
             $this->_dateCreation = $date;
+            }
+            else {
+                $this->_dateCreation = new DateTime();
+            }
+        }
+        else {
+            $this->_dateCreation = new DateTime();
+        }
     }
     
-    public function setDateUpdate(DateTime $date) {
+    public function setDateUpdate($date=NULL) {
+        if(is_string($date)){ 
+            $date = new DateTime($date);
+            if($date){
             $this->_dateUpdate = $date;
+            }
+            else {
+                $this->_dateUpdate = new DateTime();
+            }
+        }
+        else {
+            $this->_dateUpdate = new DateTime();
+        }
     }
     
     public function setPassword($password){
@@ -152,5 +179,9 @@ class Annonce {
         if(is_int($idUser)){
             $this->_id4 = $idUser;
         }
+    }
+    
+    public function setImg(array $img){
+        $this->_img = $img;
     }
 }

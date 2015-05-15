@@ -23,7 +23,7 @@
 
 	<!-- CSS
   ================================================== -->
-  	<link rel="stylesheet" href="c<?php echo CSS ?>/reset.css" type="text/css">
+  	<link rel="stylesheet" href="<?php echo CSS ?>/reset.css" type="text/css">
 	<link rel="stylesheet" href="<?php echo CSS ?>/base.css" type="text/css">
 	<link rel="stylesheet" href="<?php echo CSS ?>/skeleton.css" type="text/css">
 	<link rel="stylesheet" href="<?php echo CSS ?>/layout.css" type="text/css">
@@ -52,22 +52,22 @@
 
 </head>
 
-<body> 
+<body <?php if(isset($error404)){echo 'style="background-color:black"';} ?>> 
 	<header>			
 		<nav>
 			<div class='container'>
-				<div class='five columns logo'>
-					<a href='#'>Company Logo</a>
+				<div class='seven columns logo'>
+                                    <a href='<?php echo BASE ?>'>
+                                        <img id="logo_header" src="<?php echo IMG ?>/header/MegaPika.gif" alt="MegaRetrogaming"/>
+                                        <img id="title_header" src="<?php echo IMG ?>/header/title.png" alt="MegaRetrogaming"/>
+                                    </a>
 				</div>
 
-				<div class='eleven columns'>
+				<div id='menu_header' class='nine columns'>
 					<ul class='mainMenu'>
-						<li><a href='index.html' title='Home'>Home</a></li>
-						<li><a href='#' title='About us'>About us</a></li>
-						<li><a href='#' title='Pricing'>Pricing</a></li>
-						<li><a href='#' title='Blog'>Blog</a></li>
-						<li><a href='#' title='Portfolio'>Portfolio</a></li>
-						<li><a href='#' title='Contact'>Contact</a></li>
+						<li><a href='<?php echo BASE ?>' title='Accueil'>Accueil</a></li>
+						<li><a href='<?php echo BASE ?>list/' title='Consulter les annonces'>Consulter les annonces</a></li>
+						<li><a href='#' title='Déposer une annonce'>Déposer une annonce</a></li>
 					</ul>
 				</div>
 			</div>

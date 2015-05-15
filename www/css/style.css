@@ -2,3 +2,42 @@
     Created on : 12-May-2015, 15:13:35
     Author     : Astien
 */
+
+.error404 {
+    width: 80%;
+    margin: 0px auto;
+    display: block;
+    border-radius: 5px;
+}
+
+#logo_header {
+    width: 55px;
+}
+
+#title_header {
+width: 255px;
+vertical-align: top;
+margin-top: 30px;
+}
+
+#menu_header {
+    margin-top: 25px;
+}
+
+.annonce_list {
+    border: 2px solid rgb(144, 173, 243);
+border-radius: 5px;
+padding: 10px;
+margin-bottom: 5px;
+}
+
+.annonce_list * {
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align:top;
+}
+
+.img_list {
+    width: 200px;
+    float:right;
+}

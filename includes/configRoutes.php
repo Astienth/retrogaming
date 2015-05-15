@@ -7,7 +7,8 @@ $router->setBasePath('/CoinRetrogaming'); //a modifier en prod
 
 $router->map( 'GET', '/', 'annoncesController#indexAction');
 $router->map( 'GET', '/index.php', 'annoncesController#indexAction');
-$router->map( 'GET', '/list/[i:id]/[i:annonce]', 'annoncesController#listAction');
+$router->map('GET', '/list/', 'annoncesController#listAction');
+$router->map( 'GET', '/annonce/[i:id]', 'annoncesController#annonceAction');
 $router->map( 'POST', '/listPost', 'annoncesController#listPostAction');
   
   /* Match the current request */
@@ -22,10 +23,10 @@ if ($match) {
 }
 else {
     if ($match['target']==''){
-    echo 'Error: no route was matched'; 
+    include('app/view/404.php'); 
     //possibly throw a 404 error
     } else {
-    echo 'Error: can not call '.$controller.'#'.$action; 
+    include('app/view/404.php'); 
     //possibly throw a 404 error
     }
 }

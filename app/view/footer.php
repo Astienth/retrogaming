@@ -12,10 +12,10 @@
 
                 <div class='four columns social'>
                         <h5>Social media</h5>
-                        <a href='#'><img src='images/social/dribbble.png'></a>
-                        <a href='#'><img src='images/social/facebook.png'></a>
-                        <a href='#'><img src='images/social/twitter.png'></a>
-                        <a href='#'><img src='images/social/forrst.png'></a>
+                        <a href='#'><img src='<?php echo IMG ?>/social/dribbble.png'></a>
+                        <a href='#'><img src='<?php echo IMG ?>/social/facebook.png'></a>
+                        <a href='#'><img src='<?php echo IMG ?>/social/twitter.png'></a>
+                        <a href='#'><img src='<?php echo IMG ?>/social/forrst.png'></a>
                 </div>
 
                 <div class='four columns'>
