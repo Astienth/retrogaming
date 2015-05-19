@@ -10,6 +10,10 @@
     border-radius: 5px;
 }
 
+.error404_body {
+    background-color:black;
+}
+
 #logo_header {
     width: 55px;
 }
@@ -41,3 +45,30 @@ margin-bottom: 5px;
     width: 200px;
     float:right;
 }
+
+div.paginator {
+	//padding: 3px;
+	margin: 15px;
+}
+
+div.paginator a {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #AAAADD;
+	
+	text-decoration: none; /* no underline */
+	color: #000099;
+}
+div.paginator a:hover, div.paginator a:active {
+	border: 1px solid #000099;
+	color: #009;
+}
+div.paginator a.activePaginator {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+		border: 1px solid #000099;
+		
+		font-weight: bold;
+		background-color: #000099;
+		color: #FFF;
+	}

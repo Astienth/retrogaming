@@ -84,6 +84,10 @@ class Annonce {
         return $this->_mailContact;
     }
     
+    public function getIdUser(){
+        return $this->_idUser;
+    }
+    
     public function getImg(){
         return $this->_img;
     }
@@ -119,8 +123,7 @@ class Annonce {
         }
     }
     
-    public function setPrix($prix) {
-        
+    public function setPrix($prix) {        
         $prix = (int) $prix;
         if($prix >= 0){
             $this->_prix = $prix;
@@ -148,12 +151,6 @@ class Annonce {
             if($date){
             $this->_dateUpdate = $date;
             }
-            else {
-                $this->_dateUpdate = new DateTime();
-            }
-        }
-        else {
-            $this->_dateUpdate = new DateTime();
         }
     }
     

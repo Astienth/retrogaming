@@ -7,7 +7,7 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>RetroGaming</title>
+	<title><?php echo $PageTitle; ?></title>
 	<meta name="description" content="">
 	<meta name="Astien" content=" Retrogaming">
         <meta http-equiv="X-UA-Compatible" content="IE=9" />
@@ -21,6 +21,10 @@
 	<!-- Crete Roung -->
 	<link href='http://fonts.googleapis.com/css?family=Crete+Round&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="<?php echo BASE ?>/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="<?php echo BASE ?>/favicon.ico" type="image/x-icon">
+        
 	<!-- CSS
   ================================================== -->
   	<link rel="stylesheet" href="<?php echo CSS ?>/reset.css" type="text/css">
@@ -52,7 +56,7 @@
 
 </head>
 
-<body <?php if(isset($error404)){echo 'style="background-color:black"';} ?>> 
+<body <?php if(isset($error404)){echo 'class="error404_body"';} ?>> 
 	<header>			
 		<nav>
 			<div class='container'>
@@ -66,8 +70,8 @@
 				<div id='menu_header' class='nine columns'>
 					<ul class='mainMenu'>
 						<li><a href='<?php echo BASE ?>' title='Accueil'>Accueil</a></li>
-						<li><a href='<?php echo BASE ?>list/' title='Consulter les annonces'>Consulter les annonces</a></li>
-						<li><a href='#' title='Déposer une annonce'>Déposer une annonce</a></li>
+						<li><a href='<?php echo BASE ?>consulter-les-annonces' title='Consulter les annonces'>Consulter les annonces</a></li>
+						<li><a href='<?php echo BASE ?>deposer-une-annonce' title='Déposer une annonce'>Déposer une annonce</a></li>
 					</ul>
 				</div>
 			</div>
