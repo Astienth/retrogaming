@@ -64,4 +64,13 @@ class annoncesController {
         $PageTitle = 'Mega Retrogaming - Validation annonce';
         include('app/view/submitAnnonce.php');
     }
+    
+    public function reponseAnnonceAction(){
+        $annonceManager = new AnnonceManager();
+        $message = $_POST['message'];
+        $id = $_POST['id'];
+        $annonce = $annonceManager->getById($id);
+        $envoi = $annonceManager->contacterAnnonce($annonce, $message);
+        include 'app/view/annonces.php';
+    }
 }

@@ -235,11 +235,15 @@ class AnnonceManager {
         return $date;
     }
     
-    public function contacterAnnonce(){
-        
+    public function contacterAnnonce(Annonce $annonce, $message){
+        $mail = new EmailType('reponseAnnonce', $annonce->getMailContact());
+        $mail->addToObjet($annonce->getTitre());
+        $mail->addToCorps(BASE.$this->annonceUrl($annonce).'<br>'.$message);
+        $mail->send();
+        return $mail;
     }
     
-    public function getNew(){
+    public function getNewest(){
         
     }
 }

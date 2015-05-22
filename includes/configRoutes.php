@@ -11,6 +11,7 @@ $router->map('GET', '/list', 'annoncesController#listAction');
 $router->map('GET', '/consulter-les-annonces', 'annoncesController#listAction');
 $router->map('GET', '/consulter-les-annonces/[i:page]', 'annoncesController#listAction');
 $router->map( 'GET', '/annonce/[titre:titre]/[i:id]', 'annoncesController#annonceAction');
+$router->map('POST', '/annonce/[titre:titre]/[i:id]', 'annoncesController#reponseAnnonceAction');
 $router->map('GET', '/deposer-une-annonce', 'annoncesController#createFormAction');
 $router->map('POST', '/deposer-une-annonce', 'annoncesController#createAction');
 $router->map('GET', '/deposer-une-annonce/submit', 'annoncesController#submitAnnonce');

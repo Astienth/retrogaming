@@ -1,6 +1,16 @@
 <?php
 include 'header.php';
 ?>
+<?php
+if(isset($_POST['submit'])){
+    if($envoi){
+        echo '<p>Votre message a été envoyé</p>';
+    } else {
+        echo '<p>Une erreur s\'est produite.';
+    }
+} else {
+    
+?>
 
 <div class="annonce_list row">
     <div class="list_category">Catégorie: <?php echo $annonce->getCategory() ?></div>
@@ -15,6 +25,12 @@ include 'header.php';
     <div class="clearfix"></div>
 </div>
 
+<form method="POST" action="">
+    <input type="hidden" name="id" value="<?php echo $annonce->getId() ?>"/>
+    <input type="text" name="message"/>
+    <input type="submit" name="submit" value="envoyer"/>
+</form>
+<?php } ?>
 
 <?php
 var_dump($annonce);

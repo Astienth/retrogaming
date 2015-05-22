@@ -23,6 +23,12 @@ class EmailType {
         $this->_serverName = EMAILNAME;
         $this->_mail = $email;
         $this->_name = $name;
+        $sql = $this->_db->prepare("SELECT * FROM emailtype WHERE name = :name");
+        $sql->bindValue('name', $this->_name, PDO::PARAM_STR);
+        $sql->execute();
+        $mailType = $sql->fetchAll();
+        $this->_corps = $mailType[0]['corps'];
+        $this->_objet = $mailType[0]['objet'];
         
     }
     
@@ -33,15 +39,7 @@ class EmailType {
             $passage_ligne = "\r\n";
         } else {
             $passage_ligne = "\n";
-        }
-        
-        $sql = $this->_db->prepare("SELECT * FROM emailtype WHERE name = :name");
-        $sql->bindValue('name', $this->_name, PDO::PARAM_STR);
-        $sql->execute();
-        $mailType = $sql->fetchAll();
-        $this->_corps = $mailType[0]['corps'];
-        $this->_objet = $mailType[0]['objet'];
-        
+        }        
         
         //=====Création de la boundary.
         $boundary = "-----=".md5(rand());
@@ -71,5 +69,13 @@ class EmailType {
         $send = mail($this->_mail,$this->_objet,$message,$this->_header);
         
         return $send;
+    }
+    
+    public function addToObjet($obj){
+        $this->_objet = $this->_objet.$obj; 
+    }
+    
+    public function addToCorps($corps){
+        $this->_corps = $this->_corps.$corps;
     }
 }
